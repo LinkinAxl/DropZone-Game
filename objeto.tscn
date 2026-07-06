@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://doj4wfdic1jfa"]
+
+[ext_resource type="Script" uid="uid://o0gi1vx8slk0" path="res://objeto.gd" id="1_wm8r3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(40, 40)
+
+[node name="Objeto" type="Area2D" unique_id=435457978]
+script = ExtResource("1_wm8r3")
+velocidad = 380.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2108235921]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126255755]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_g4v7s")
