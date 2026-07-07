@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DropZone"
-run/main_scene="uid://c0h6rgl0ofn30"
+run/main_scene="uid://dx1h6o4kq47nd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

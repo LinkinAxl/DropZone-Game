@@ -4,23 +4,26 @@
 [ext_resource type="Script" uid="uid://cv1nqnwcx418f" path="res://mundo.gd" id="1_lgngo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(246, 43.5)
+size = Vector2(81.5, 25)
 
 [node name="Mundo" type="Node2D" unique_id=1744659842]
 script = ExtResource("1_lgngo")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2017630228]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Jugador" type="Area2D" parent="." unique_id=1928939539]
 script = ExtResource("1_6ba58")
-velocidad = 500.0
 
 [node name="ColorRect" type="ColorRect" parent="Jugador" unique_id=798449515]
-offset_top = 605.0
-offset_right = 245.0
+offset_top = 622.0
+offset_right = 81.0
 offset_bottom = 646.0
 color = Color(0, 0.5647059, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=1380379801]
-position = Vector2(122, 625.75)
+position = Vector2(40.25, 634.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Timer" type="Timer" parent="." unique_id=1955283029]

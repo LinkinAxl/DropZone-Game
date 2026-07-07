@@ -1,6 +1,7 @@
 extends Area2D
 
-@export var velocidad : float = 400.0
+# Quitamos el @export para que el script de mundo.gd pueda controlar la velocidad sin problemas
+var velocidad : float = 500.0
 
 func _process(delta: float) -> void:
 	var direccion : float = 0.0
@@ -12,5 +13,5 @@ func _process(delta: float) -> void:
 		
 	position.x += direccion * velocidad * delta
 	
-	# Evitamos que el jugador se salga de los bordes de la pantalla
+	# Evitamos que el jugador se salga de los bordes de la pantalla (Ancho estándar de 1152px)
 	position.x = clamp(position.x, 0, 1152 - 120)

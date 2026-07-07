@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dx1h6o4kq47nd"]
+
+[ext_resource type="Script" uid="uid://w7sqkbu4tj8l" path="res://menu_inicio.gd" id="1_wkv36"]
+[ext_resource type="Texture2D" uid="uid://bjq5ffjiuapde" path="res://wallpaper_juego.png" id="2_ylpju"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 90
+font_color = Color(0, 1, 0.70980394, 1)
+outline_size = 16
+outline_color = Color(0, 1, 0, 1)
+shadow_size = 20
+shadow_color = Color(18.892157, 18.892157, 18.892157, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_ylpju"]
+font_names = PackedStringArray("Algerian")
+font_italic = true
+font_weight = 800
+font_stretch = 200
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(0, 0, 0.6, 0.5176471)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.9137255, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing = false
+anti_aliasing_size = 1.314
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0u6y"]
+bg_color = Color(0.698581, 0.92050594, 0.92008525, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_s632e"]
+font_names = PackedStringArray("Algerian")
+font_italic = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gngh"]
+bg_color = Color(0, 0, 1, 0.22352941)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcnqv"]
+bg_color = Color(0, 1, 1, 1)
+
+[node name="MenuInicio" type="Control" unique_id=2038524116]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1051.0
+offset_bottom = -606.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wkv36")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=865805237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1056.0
+offset_bottom = 606.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ylpju")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="." unique_id=443482965]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 163.0
+offset_right = 658.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 90
+text = "DROPZONE"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="BotonJugar" type="Button" parent="." unique_id=2104855370]
+custom_minimum_size = Vector2(280, 65)
+custom_maximum_size = Vector2(280, 65)
+layout_mode = 0
+offset_left = 416.0
+offset_top = 373.0
+offset_right = 696.0
+offset_bottom = 438.0
+theme_override_fonts/font = SubResource("SystemFont_ylpju")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d0u6y")
+text = "JUGAR"
+
+[node name="BotonSalir" type="Button" parent="." unique_id=2119148959]
+custom_minimum_size = Vector2(280, 65)
+custom_maximum_size = Vector2(280, 65)
+layout_mode = 0
+offset_left = 420.0
+offset_top = 492.0
+offset_right = 700.0
+offset_bottom = 557.0
+theme_override_fonts/font = SubResource("SystemFont_s632e")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3gngh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcnqv")
+text = "SALIR"
+
+[connection signal="pressed" from="BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="BotonSalir" to="." method="_on_boton_salir_pressed"]
